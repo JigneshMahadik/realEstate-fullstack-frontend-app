@@ -44,7 +44,7 @@ export function Signup(){
                     <button type="submit">Login</button>
                     <br></br><br></br>
                     <p id="dont-have-acc">Already have an account ?</p>
-                    <NavLink to="/Login"><p id="btn-signup">Login</p></NavLink>
+                    <NavLink to="/Login"><p id="btn-signup">Signup</p></NavLink>
                     <NavLink to="/"><p id="btn-home">&laquo;Home Page</p></NavLink>
                     <br></br>
                 </form>
