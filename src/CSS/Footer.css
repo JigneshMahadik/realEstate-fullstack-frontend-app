@@ -1,0 +1,49 @@
+#footer{
+    background-color: aliceblue;
+    justify-content: space-around;
+    display: flex;
+    align-items: start;
+    padding: 5%;
+    margin-top: 5%;
+}
+#footer-title{
+    /* background-color: antiquewhite; */
+    font-size: large;
+    font-weight: 600;
+    text-align: left;
+    line-height: 50px;
+}
+#footer-detail{
+    /* background-color: yellowgreen; */
+    text-align: left;
+    font-size: 15px;
+}
+#footer-cont-2{
+    /* background-color: yellowgreen; */
+}
+#footer-detail-follow-us{
+    /* background-color: wheat; */
+}
+.follow-us-icon{
+    height: 30px;
+    /* width: 10px; */
+}
+#footer-detail-follow-us{
+    text-align: left;
+    font-size: 5px;
+    display: flex;
+    /* background-color: yellowgreen; */
+}
+/* #follow-us-icon{
+    font-size: large;
+} */
+#copyright-footer{
+    background-color: rgb(34, 57, 57);
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1%;
+}

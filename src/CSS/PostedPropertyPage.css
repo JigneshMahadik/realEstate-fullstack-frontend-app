@@ -1,0 +1,116 @@
+#posted-property-title{
+    /* background-color: rgb(165, 176, 143); */
+    padding-top: 8%;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#posted-prop-cont{
+    /* background-color: thistle; */
+    padding: 0 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#posted-property-card{
+    background-color: #d5dbe1;
+    box-shadow: 0 2px 2px 0 rgba(210, 205, 205, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    /* margin: 0 10px; */
+    flex-wrap: wrap;
+    padding: 10px;
+}
+#posted-prop-image-box{
+    width: 375px;
+    height: 230px;
+    /* min-width: 300px; */
+}
+#posted-prop-image-box img{
+    width: 100%;
+    height: 100%;
+}
+#posted-prop-details{
+    display: flex;
+    /* background-color: blueviolet; */
+    /* width: 100%; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#left-details{
+    width: 550px;
+    /* background-color: yellowgreen; */
+    text-align: left;
+    padding-left: 15px;
+    line-height: 25px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+#posted-prop-location{
+    display: flex;
+    /* background-color: yellowgreen; */
+    align-items: center;
+    gap: 5px;
+}
+#posted-prop-location img{
+    margin-top: 5px;
+}
+#posted-prop-des{
+    /* display: flex; */
+    /* width: 100%; */
+}
+#price{
+    color: black;
+}
+#posted-prop-bed{
+    display: flex;
+    /* background-color: yellowgreen; */
+    gap: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #343537;
+}
+#right-details{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-left: 1px solid rgb(177, 167, 167);
+    /* width: 100%; */
+}
+#right-details button{
+    width: 100%;
+    padding: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+#btn-sold{
+    background-color: yellowgreen;
+    border: none;
+    text-decoration: line-through;
+}
+
+@media(max-width:700px){
+    #posted-prop-image-box{
+        max-width: 375px;
+        width: 100%;
+        /* height: 230px; */
+        /* min-width: 300px; */
+    }
+    #posted-property-card{
+        justify-content: center;
+    }
+    #right-details{
+        border-left: none;
+        justify-content: center;
+        /* background-color: yellowgreen; */
+        /* width: 100%;
+        padding-right: 20px; */
+    }
+    #left-details{
+        width: 100%;
+    }
+    #posted-property-title{
+        padding-top: 60px;
+    }
+}

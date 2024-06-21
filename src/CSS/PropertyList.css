@@ -1,0 +1,109 @@
+#property-list-cont{
+    /* background-color: darkgrey; */
+    padding: 0 3% 40px 3%;
+    /* padding-bottom: 40px; */
+}
+#list-header{
+    display: flex;
+    /* background-color: yellowgreen; */
+    justify-content: space-between;
+    margin: 0 0.8% 2% 0.8%;
+
+}
+option{
+    font-weight: 500;
+    font-size: 15px;
+}
+#property-list{
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#prop-list-link{
+    text-decoration: none;
+    color: inherit;
+}
+#property-card{
+    /* height: 400px; */
+    /* background-color: tomato; */
+    box-shadow: 0 2px 2px 0 rgba(210, 205, 205, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+    margin-bottom: 35px;
+}
+#property-card:hover{
+    cursor: pointer;
+}
+#image-cont{
+    /* background-color: aquamarine; */
+    width: 375px;
+    height: 230px;
+}
+#property-img:hover{
+    /* transform: scale(1.2); */
+}
+#property-img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+#detail-cont{
+    text-align: left;
+    /* background-color: rgb(205, 50, 171); */
+    /* padding-left: 10px; */
+    width: 375px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+}
+#detail-cont h2,p{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+#address{
+    font-size: 15px;
+    /* background-color: yellowgreen; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+#location{
+    width: 13px;
+    height: 15px;
+}
+#prop-price{
+    margin-top: 13px;
+    color: rgb(100, 94, 94);
+    font-weight: bolder;
+}
+#list-rooms{
+    display: flex;
+    /* background-color: yellowgreen; */
+    /* margin-top: 10px; */
+    justify-content: space-between
+}
+#list-rooms p{
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+#rooms-left{
+    /* background-color: aqua; */
+    display: flex;
+}
+#type-right{
+    background-color: #19df83;
+    color: rgb(27, 3, 3);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+@media(max-width:600px){
+    #image-cont, #detail-cont{
+        width: 100%;
+    }
+}

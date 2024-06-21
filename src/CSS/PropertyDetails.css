@@ -1,0 +1,141 @@
+#property-details-images{
+    width: 100%;
+    /* height: 650px; */
+    padding-top: 4%;
+    /* background-color: yellowgreen; */
+}
+.property-container img{
+    width: 100%;
+    /* height: 70%; */
+    object-fit: contain;
+}
+.property-container {
+    /* background-color: white; */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+
+.property-container h1 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 24px;
+}
+#prop-det-location{
+    display: flex;
+    /* background-color: yellowgreen; */
+    align-content: center;
+    margin-bottom: 20px;
+}
+#prop-det-location img{
+    width: 20px;
+}
+#prop-det-title{
+    margin-top: 20px;
+}
+
+.address {
+    color: #666;
+    font-size: 16px;
+}
+#details-pincode{
+    font-weight: 600;
+    color: black;
+    font-size: 17px;
+}
+#details-title-cont{
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#details-trans-type{
+    background-color: #4fb759;
+    /* padding: 10px; */
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    color: rgb(27, 3, 3);
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.property-section {
+    margin-bottom: 20px;
+}
+
+.property-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+.property-section p {
+    color: #555;
+    font-size: 16px;
+}
+
+.amenities-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.amenities-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.message-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.message-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .property-container {
+        padding: 20px;
+        /* margin: 10px; */
+        padding-top: 14%;
+    }
+
+    .property-container h1 {
+        font-size: 20px;
+    }
+
+    .address {
+        font-size: 14px;
+    }
+
+    .property-section h2 {
+        font-size: 18px;
+    }
+
+    .property-section p, .amenities-list li {
+        font-size: 14px;
+    }
+
+    .message-button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

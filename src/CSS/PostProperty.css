@@ -1,0 +1,120 @@
+#title {
+    padding-top: 7%;
+    text-align: center;
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+#post-main-cont {
+    display: flex;
+    flex-wrap: wrap; /* Better responsiveness */
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Max width for the container */
+    gap: 20px; /* Spacing between sections */
+    /* background-color: yellowgreen; */
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#left-part, #right-part {
+    flex: 1;
+    padding: 15px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+    background-color: #d5dbe1;
+    box-shadow: 0 2px 2px 0 rgba(210, 205, 205, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    min-width: 300px;
+}
+#uploaded-images{
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 2px 0 2px;
+    justify-content: space-between;
+}
+#uploaded{
+    min-width: 260px;
+    background-color: rgb(247, 248, 249);
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    /* background-color: rgb(151, 84, 93); */
+}
+#upload-img-box{
+    height: 60px;
+}
+#upload-img-box img{
+    width: 80px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-size: contain;
+    height: 100%;
+    object-fit: cover;
+}
+#btn-remove{
+    /* margin-right: 10px; */
+    cursor: pointer;
+    border: none;
+    color: red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* background-color: yellowgreen; */
+    align-content: center;
+}
+#drop-down {
+    display: flex;
+    justify-content: space-between; /* Better alignment */
+    gap: 10px; /* Spacing between dropdowns */
+}
+
+#drop-down select {
+    flex: 1; /* Evenly distribute space */
+}
+
+#left-part input, #left-part select, #right-part input[type="file"] {
+    padding: 10px;
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+#name-cont, #price-cont {
+    display: flex;
+    gap: 10px; /* Spacing between inputs */
+}
+
+#name-cont input, #price-cont input {
+    flex: 1; /* Evenly distribute space */
+}
+
+button[type="submit"] {
+    padding: 10px 100px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in width */
+    margin-top: 10px; /* Space above the button */
+    /* margin-left: 20px;
+    margin-right: 20px; */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    #left-part, #right-part {
+        width: 100%;
+    }
+
+    #name-cont, #price-cont {
+        flex-direction: column;
+    }
+
+    #name-cont input, #price-cont input {
+        width: 100%;
+    }
+}
