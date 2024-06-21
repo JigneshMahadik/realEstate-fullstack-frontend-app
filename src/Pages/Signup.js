@@ -41,10 +41,10 @@ export function Signup(){
                     <input type="text" name="mobile" id="mobile" placeholder="Mobile Number" required/>
                     <input type="text" name="email" id="email" placeholder="Email" required/>
                     <input type="password" name="password" id="password" placeholder="Password" required/>
-                    <button type="submit">Login</button>
+                    <button type="submit">Signup</button>
                     <br></br><br></br>
                     <p id="dont-have-acc">Already have an account ?</p>
-                    <NavLink to="/Login"><p id="btn-signup">Signup</p></NavLink>
+                    <NavLink to="/Login"><p id="btn-signup">Login</p></NavLink>
                     <NavLink to="/"><p id="btn-home">&laquo;Home Page</p></NavLink>
                     <br></br>
                 </form>
