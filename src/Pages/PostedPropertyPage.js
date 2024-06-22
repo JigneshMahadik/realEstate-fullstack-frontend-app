@@ -24,7 +24,7 @@ export function PostedPropertyPage(){
         // const id = "667570fbcb61e30137e6543d";
         const decodedToken = jwtDecode(token);
         const id = decodedToken.user;
-        const res = await axios.post(`http://localhost:8082/getPropertiesByUserID?propId=${id}`,null,{
+        const res = await axios.post(`https://realestate-fullstack-backend-app.onrender.com/getPropertiesByUserID?propId=${id}`,null,{
             headers : {
                 "authorization": token,
             }
@@ -40,7 +40,7 @@ export function PostedPropertyPage(){
             const fixedFiles = record.files.map(file => {
                 const temp2 = file.split("\\");
                 const last = temp2[temp2.length - 1];
-                return `http://localhost:8082/filesUploaded/${last}`;
+                return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
             });
             return {
                 ...record,
