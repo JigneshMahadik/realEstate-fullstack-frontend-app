@@ -30,7 +30,7 @@ export function PropertyDetails(){
         // console.log("new url: ", newUR);
         
         // const data = imgPath.map(file => {
-            const temp2 = imgPath[0].split("\\");
+            const temp2 = imgPath[0].split("\/");
             const last = temp2[temp2.length-1];
             // console.log("last",`http://localhost:8082/filesUploaded/${last}`);
             setPropertyImage(`https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`);

@@ -25,7 +25,7 @@ export function PropertyList(){
             const fixedFiles = record.files.map(file => {
                 // Convert the file path to a URL that can be accessed by the browser
                 // const fixedFilePath = file.replace(/\\/g, "/");
-                const temp2 = file.split("\\");
+                const temp2 = file.split("\/");
                 const last = temp2[temp2.length-1];
                 const folder = temp2[temp2.length-2];
                 // console.log("last",folder);
