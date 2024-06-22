@@ -38,7 +38,7 @@ export function PostedPropertyPage(){
 
         const processedRecords = res.data.records.map(record => {
             const fixedFiles = record.files.map(file => {
-                const temp2 = file.split("\\");
+                const temp2 = file.split("\/");
                 const last = temp2[temp2.length - 1];
                 return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
             });
