@@ -82,7 +82,10 @@ export function PropertyList(){
                                     <NavLink to={`/PropertyDetails/${item._id}`} id="prop-list-link" key={id}>
                                         <div id="property-card">
                                             <div id="image-cont">
-                                                <img src={item.files[0]} id="property-img"/>
+                                                {
+                                                    console.log("Console image: ",item.files[0])
+                                                }
+                                                <img src={item.files[0]} id="property-img" alt="image"/>
                                             </div>
                                             <div id="detail-cont">
                                                 <h2>{item.property_name}</h2>

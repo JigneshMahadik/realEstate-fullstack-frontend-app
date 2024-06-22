@@ -88,7 +88,10 @@ export function PostedPropertyPage(){
                         <div id="posted-prop-cont" key={id}>
                             <div id="posted-property-card">
                                 <div id="posted-prop-image-box">
-                                    <img src={property.fixedFiles[0]} />
+                                    {
+                                        console.log("posted prop image : ",property.fixedFiles[0])
+                                    }
+                                    <img src={property.fixedFiles[0]} alt="image"/>
                                 </div>
                                 <div id="posted-prop-details">
                                     <div id="left-details">

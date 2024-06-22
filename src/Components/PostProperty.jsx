@@ -30,6 +30,7 @@ export function PostProperty() {
         const token = sessionStorage.getItem('token'); // or wherever you store your token
         if(!token){
             alert("Warning : Please login !")
+            return;
         }
         else{
             event.preventDefault();
