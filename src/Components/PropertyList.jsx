@@ -30,7 +30,7 @@ export function PropertyList(){
                 const last = temp2[temp2.length-1];
                 const folder = temp2[temp2.length-2];
                 // console.log("last",folder);
-                return `http://localhost:8082/filesUploaded/${last}`;
+                return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
                 // http://localhost:8082/filesUploaded/img4.jpg
             });
             return {
