@@ -61,6 +61,11 @@ export function RequestedPropertyPage(){
         }
     }
 
+    // Formate the image URL .
+    function formatImageUrl(url) {
+        return url.replace('/opt/render/project/src', '');
+    }
+
     return(
         <div>
             <Navbar/>
