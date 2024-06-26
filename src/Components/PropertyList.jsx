@@ -1,11 +1,11 @@
 import "../CSS/PropertyList.css"
-import img1 from "../Assets/Images/img3.jpg"
-import img2 from "../Assets/Images/img4.jpg"
-import img3 from "../Assets/Images/img5.jpeg"
+import left from "../Assets/Icons/left.png"
+import right from "../Assets/Icons/right.png"
 import location from "../Assets/Icons/location.png"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { NavLink } from "react-router-dom"
+
 
 export function PropertyList(){
 
@@ -30,6 +30,7 @@ export function PropertyList(){
                 const last = temp2[temp2.length-1];
                 const folder = temp2[temp2.length-2];
                 // console.log("last",folder);
+                // return `http://localhost:8082/filesUploaded/${last}`;
                 return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
                 // http://localhost:8082/filesUploaded/img4.jpg
             });
@@ -120,7 +121,8 @@ export function PropertyList(){
                         ):(<p>Records not found !</p>)
                     }
                 </div>
-
+                <img src={left}/>
+                <img src={right}/>
             </div>
         </div>
     )
