@@ -11,11 +11,13 @@ export function Login(){
         const password = document.getElementById("password").value;
 
         try{
+            // const res = await axios.post("http://localhost:8082/Login",
             const res = await axios.post("https://realestate-fullstack-backend-app.onrender.com/Login",
             {
                 email : emailId,
                 password : password
             });
+            
             sessionStorage.setItem("token",res.data.token);
             window.location = "/";
         }

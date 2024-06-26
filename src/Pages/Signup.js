@@ -14,7 +14,8 @@ export function Signup(){
         const Password = document.getElementById("password").value;
         
         try {
-            await axios.post("https://realestate-fullstack-backend-app.onrender.com/Signup",{
+            // await axios.post("http://localhost:8082/Signup",{
+                await axios.post("https://realestate-fullstack-backend-app.onrender.com/Signup",{
                 first_name : Fname,
                 last_name : Lname,
                 email : Email,

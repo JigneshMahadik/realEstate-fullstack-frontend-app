@@ -110,6 +110,11 @@
 .message-button:hover {
     background-color: #0056b3;
 }
+#msg{
+    /* background-color: yellowgreen; */
+    width: 100%;
+    padding: 20px 10px;
+}
 
 @media (max-width: 600px) {
     .property-container {

@@ -43,6 +43,7 @@ export function PostProperty() {
             const propertySubtype = document.getElementById("propertySubtype").value;
             const price = document.getElementById("price").value;
             var beds = document.getElementById("beds").value;
+            var area = document.getElementById("area-sqft").value;
             // if(beds == ""){
             //     beds = 0
             // }
@@ -69,13 +70,15 @@ export function PostProperty() {
             formData.append('bathrooms', bathrooms)
             formData.append('furnishing', furnishing)
             formData.append('other_details', otherDetails)
+            formData.append('area', area);
 
             files.forEach((file) => {
                 formData.append('files', file);
             });
 
             try{
-                const res = await axios.post("https://realestate-fullstack-backend-app.onrender.com/postProperty",formData, {
+                // const res = await axios.post("http://localhost:8082/postProperty",formData, {
+                    const res = await axios.post("https://realestate-fullstack-backend-app.onrender.com/postProperty",formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                         "authorization": token,
@@ -170,6 +173,9 @@ export function PostProperty() {
                     <label id="furnished">
                         {/* Furnishing: */}
                         <input type="text" name="furnishing" placeholder="Furnished / Unfurnished" id="furnishing"/>
+                    </label>
+                    <label>
+                        <input type="text" name="area-sqft" placeholder="Area (Ex : 2000 sq ft)" id="area-sqft"/>
                     </label>
                     <label>
                         {/* Other Details: */}
