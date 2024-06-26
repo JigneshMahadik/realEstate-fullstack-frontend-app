@@ -32,7 +32,7 @@ export function RequestedPropertyPage(){
                     }
                 }
             );
-            console.log("data is",res.data.data);
+            // console.log("data is",res.data.data);
             setRequests(res.data.data);
         }
         catch(error){
@@ -72,7 +72,13 @@ export function RequestedPropertyPage(){
                             <div id="req-prop-cont" key={id}>
                                 <div id="req-property-card">
                                     <div id="req-prop-image-box">
-                                        <img src={item.files[0]} />
+                                    {
+                                        item.files && item.files.length > 0 ? (
+                                            <img src={item.files[0]} alt="Property image" />
+                                        ):(
+                                            <img src={img1} alt="Property image" /> // Provide a default image
+                                        )
+                                    }
                                     </div>
                                     <div id="req-prop-details">
                                         <div id="left-details">
