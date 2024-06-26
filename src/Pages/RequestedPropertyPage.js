@@ -72,7 +72,7 @@ export function RequestedPropertyPage(){
                             <div id="req-prop-cont" key={id}>
                                 <div id="req-property-card">
                                     <div id="req-prop-image-box">
-                                        <img src={img3} />
+                                        <img src={item.files[0]} />
                                     </div>
                                     <div id="req-prop-details">
                                         <div id="left-details">
