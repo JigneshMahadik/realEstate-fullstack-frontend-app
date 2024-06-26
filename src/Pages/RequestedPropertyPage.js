@@ -74,7 +74,7 @@ export function RequestedPropertyPage(){
                                     <div id="req-prop-image-box">
                                     {
                                         item.files && item.files.length > 0 ? (
-                                            <img src={item.files[0]} alt="Property image" />
+                                            <img src={`https://realestate-fullstack-backend-app.onrender.com${item.files[0]}`} alt="Property image" />
                                         ):(
                                             <img src={img1} alt="Property image" /> // Provide a default image
                                         )
