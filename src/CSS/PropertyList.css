@@ -28,7 +28,7 @@ option{
     /* height: 400px; */
     /* background-color: tomato; */
     box-shadow: 0 2px 2px 0 rgba(210, 205, 205, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 5px;
+    /* padding: 5px; */
     margin-bottom: 35px;
 }
 #property-card:hover{
@@ -54,10 +54,12 @@ option{
     width: 375px;
     /* padding-left: 5px;
     padding-right: 5px; */
+    padding: 10px;
 }
 #detail-cont h2,p{
     margin-bottom: 5px;
     margin-top: 10px;
+    text-align: left;
 }
 #address{
     font-size: 15px;
@@ -100,6 +102,22 @@ option{
     padding-bottom: 2px;
     border-radius: 5px;
     text-transform: capitalize;
+}
+#left-arrow{
+    cursor: pointer;
+}
+#right-arrow{
+    cursor: pointer;
+}
+#left-arrow, #right-arrow {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#left-arrow:active, #right-arrow:active {
+    transform: scale(1.2); /* Scale up to 1.2 times the original size */
 }
 
 @media(max-width:600px){

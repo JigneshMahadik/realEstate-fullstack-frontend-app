@@ -88,6 +88,9 @@
     padding-left: 40px;
     padding-right: 40px;
 }
+#no-req-prop{
+    text-align: center;
+}
 
 @media(max-width:700px){
     #req-prop-image-box{

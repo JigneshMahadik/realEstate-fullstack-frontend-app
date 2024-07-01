@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     padding: 3%;
-    margin-top: -80px;
+    /* margin-top: -80px; */
 }
 #search-box{
     display: flex;
@@ -50,7 +50,9 @@ input::placeholder{
 
 @media(max-width:700px){
     #search-box{
-        margin-top: 13%;
+        /* margin-top: 13%; */
+        margin-top: 7%;
+        margin-bottom: 5%;
         width: 100%;
         justify-content: center;
         border: none;

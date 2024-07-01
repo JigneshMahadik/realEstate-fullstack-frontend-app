@@ -3,6 +3,7 @@ import linkedin from "../Assets/Icons/linkedin.png"
 import insta from "../Assets/Icons/insta.svg"
 import twitter from "../Assets/Icons/twitter.svg"
 import fb from "../Assets/Icons/fb.svg"
+import { NavLink } from "react-router-dom"
 
 export function Footer(){
     return(
@@ -25,7 +26,7 @@ export function Footer(){
                     </div>
                 </div>
                 <div id="footer-cont-3">
-                    <h1 id="footer-title">About us</h1>
+                    <NavLink to="/About" id="footer-menu"><h1 id="footer-title">About us</h1></NavLink>
                 </div>
             </div>
             <div id="copyright-footer">

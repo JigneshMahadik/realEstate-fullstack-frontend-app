@@ -116,7 +116,7 @@ export function RequestedPropertyPage(){
                         )
                     })
                 ):(
-                    <p>You haven't requested any property yet !</p>
+                    <p id="no-req-prop">You haven't requested any property yet !</p>
                 )
             }
             <Footer/>

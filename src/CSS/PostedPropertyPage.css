@@ -256,6 +256,9 @@ h2 {
 #edit-img-upload{
     margin-bottom: 20px;
 }
+#no-posted-prop{
+    text-align: center;
+}
 
 /* Responsive Styles */
 @media (max-width: 600px) {

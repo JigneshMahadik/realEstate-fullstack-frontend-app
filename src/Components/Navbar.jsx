@@ -6,10 +6,12 @@ import { HomePage } from "../Pages/HomePage"
 import { PostPropertyPage } from "../Pages/PostPropertyPage"
 import logo from "../Assets/Icons/logo.png"
 import { useEffect,useState } from "react"
+import {jwtDecode} from 'jwt-decode'
 
 export function Navbar(){
 
     const [ token, setToken ] = useState();
+    const [ username, setUserName ] = useState("");
 
     useEffect(()=>{
         const token = sessionStorage.getItem("token");
@@ -17,6 +19,9 @@ export function Navbar(){
             setToken(token);
             // const auth_btn = document.getElementById("auth-btn");
             // auth_btn.style.display = "none";
+            const decodedToken = jwtDecode(token);
+            const username = decodedToken.name;
+            setUserName(username);
         }
     },[]);
 
@@ -34,22 +39,25 @@ export function Navbar(){
                 </div>
                 <div id="menu">
                     <NavLink to={"/"} id="home"><p>Home</p></NavLink>
-                    <NavLink to={"/"} id="latest-prop"><p>Latest Properties</p></NavLink>
                     <NavLink to={"/PostPropertyPage"} id="post-prop"><p>Post Property (Free)</p></NavLink>
+                    <NavLink to={"/About"} id="latest-prop"><p>About</p></NavLink>
                 </div>
                 {
                     token ? (
                         <div id="profile">
-                            <img src={profile} id="profile-img"/>
+                            <div id="profile-name-cont">
+                                <p id="username-1">Welcome, {username}</p>
+                                <img src={profile} id="profile-img"/>
+                            </div>
                             <img src={stack} id="stack-icon"/>
                             <div className="popup">
                                 <div className="popup-content">
                                     <ul>
-                                        <li>Profile</li>
+                                        <li id="username-2">Welcome, {username}</li>
+                                        <hr id="username-2"></hr>
+                                        <NavLink to="/PostedPropertyPage" id="nav-menu-prop"><li>Posted Property</li></NavLink>
                                         <hr></hr>
-                                        <NavLink to="/PostedPropertyPage"><li>Posted Property</li></NavLink>
-                                        <hr></hr>
-                                        <NavLink to="/RequestedPropertyPage"><li>Requested Property</li></NavLink>
+                                        <NavLink to="/RequestedPropertyPage" id="nav-menu-prop"><li>Requested Property</li></NavLink>
                                         <hr></hr>
                                         <li onClick={Logout}>Logout</li>
                                     </ul>

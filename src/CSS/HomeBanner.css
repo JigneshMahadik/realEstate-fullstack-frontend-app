@@ -1,87 +1,50 @@
-#home-banner img{
-    width: 100%;
+.banner {
+    background-image: url('../Assets/Images/HomeBanner.jpeg'); /* Replace with your image path */
     background-size: cover;
-    /* border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px; */
-}
-/* #banner-detail h1{
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
-    font-weight: 500;
-    font-size: 2.5rem;
-    position: absolute;
-    margin-top: -500px;
-    
-} */
-#banner-detail{
-    color: white;
-    /* font-weight: 500; */
-    /* font-size: 2.5rem; */
-    position: absolute;
-    margin-top: -490px;
-    /* background-color: yellowgreen; */
 }
-#banner-title{
-    font-size: 2.5rem;
-    /* font-weight: 500; */
-    margin-left: 40px;
-    background-color: black;
-    /* opacity: 0.5; */
-    background-color: hsla(0, 13%, 11%, 0.5); /* White with 50% opacity */
+
+.caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
+    padding: 10px;
+    border-radius: 10px;
 }
-#caption{
-    font-size: 30px;
-    margin-left: -300px;
+
+.caption h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.caption p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
     font-family: cursive;
-    margin-top: 10px;
 }
-#btn-explore{
-    margin-left: -590px;
+
+.banner-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: darkslategrey;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
     background: transparent;
     border: 2px solid white;
-    padding: 15px;
-    /* padding-left: 20px;
-    padding-right: 20px; */
-    width: 100px;
-    margin-top: 20px;
-    color: white;
-    font-weight: 600;
-    font-size: larger;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
-
-@media(max-width:800px){
-    #banner-detail{
-        margin-top: -40%;
-        color: white;
-        font-size: 10px;
-        margin-left: 20px;
-    }
-    #banner-title{
-        font-size: 15px;
-        margin-left: -10px;
-    }
-    #caption{
-        font-size: 13px;
-        margin-left: -110px;
-        margin-top: 5px;
-    }
-    #btn-explore{
-        margin-left: -180px;
-        margin-top: 15px;
-        padding: 6px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    #home-banner img{
-        border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    }
-    #home-banner{
-        padding-top: 40px;
-    }
+.banner-button:hover {
+    background-color: #0056b3;
 }
-#btn-explore:hover{
+
+.banner-button:hover {
     background-color: darkslategrey;
     animation-name: color-change;
     animation-duration: 4s;
@@ -90,4 +53,18 @@
     0% { background-color: rgb(22, 71, 30); }
     50% { background-color: rgb(136, 119, 122); }
     100% { background-color: rgb(22, 71, 30); }
+}
+
+@media (max-width: 768px) {
+    .caption h1 {
+        font-size: 2em;
+    }
+
+    .caption p {
+        font-size: 1.2em;
+    }
+
+    .banner-button {
+        font-size: 0.9em;
+    }
 }

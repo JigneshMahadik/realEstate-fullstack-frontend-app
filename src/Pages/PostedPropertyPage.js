@@ -11,6 +11,7 @@ import {jwtDecode} from 'jwt-decode';
 import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 
+
 export function PostedPropertyPage(){
 
     const token = sessionStorage.getItem('token'); // or wherever you store your token
@@ -18,6 +19,7 @@ export function PostedPropertyPage(){
     const  [ postedProperties, setPostedProperties ] = useState([]);
     const [ messages, setMessages ] = useState([]);
     const [editProperty, setEditProperty] = useState(null);
+
 
     useEffect(()=>{
         getPropertyDetailsByUserId();
@@ -127,7 +129,7 @@ export function PostedPropertyPage(){
         setEditProperty(property);
         document.getElementById("edit-popup").style.display = "block";
     }
-    console.log("jack is :",editProperty);
+    // console.log("jack is :",editProperty);
 
     async function handleEditProperty(e){
         e.preventDefault();
@@ -220,7 +222,7 @@ export function PostedPropertyPage(){
                             </div>
                         </div>
                     ))
-                ):(<p>No Property has been posted yet !</p>)
+                ):(<p id="no-posted-prop">No Property has been posted yet !</p>)
             }
 
             {/* Popup start */}

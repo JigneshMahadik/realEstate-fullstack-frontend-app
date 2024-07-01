@@ -104,7 +104,7 @@ export function PropertyDetails(){
                         </div>
                         
                         <div class="property-section">
-                            <h2>Description</h2>
+                            <h2 id="prop-det-title">Description</h2>
                             <p>{propertyDetails.other_details}</p>
                         </div>
                         {
@@ -119,7 +119,7 @@ export function PropertyDetails(){
                                 </div>
                             ):(
                                 <div class="property-section">
-                                    <h2>Area(Sqft)</h2>
+                                    <h2 id="prop-det-title">Area(Sqft)</h2>
                                     <ul class="amenities-list">
                                         <li>{propertyDetails.area} Sqft</li>
                                     </ul>
