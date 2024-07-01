@@ -80,10 +80,18 @@ export function PropertyList() {
                                             <p>₹.{item.price}</p>
                                         </div>
                                         <div id="list-rooms">
-                                            <div id="rooms-left">
-                                                <p>{item.beds} Beds</p>
-                                                <p>{item.bathrooms} Bathrooms</p>
-                                            </div>
+                                            {
+                                                item.property_type == "Residential" ?(
+                                                    <div id="rooms-left">
+                                                        <p>{item.beds} Beds</p>
+                                                        <p>{item.bathrooms} Bathrooms</p>
+                                                    </div>
+                                                ):(
+                                                    <div id="rooms-left">
+                                                        <p>{item.area} Sqft</p>
+                                                    </div>
+                                                )
+                                            }
                                             {item.sold === "sold" ? (
                                                 <p id="type-right">Sold</p>
                                             ) : (
