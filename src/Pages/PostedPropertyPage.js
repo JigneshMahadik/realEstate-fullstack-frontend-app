@@ -30,7 +30,7 @@ export function PostedPropertyPage(){
         const decodedToken = jwtDecode(token);
         const id = decodedToken.user;
         // const res = await axios.post(`http://localhost:8082/getPropertiesByUserID?propId=${id}`,null,{
-            const res = await axios.post(`https://realestate-fullstack-backend-app.onrender.com/getPropertiesByUserID?propId=${id}`,null,{
+            const res = await axios.post(`https://realestate-fullstack-backend-app-1.onrender.com/getPropertiesByUserID?propId=${id}`,null,{
             headers : {
                 "authorization": token,
             }
@@ -47,7 +47,7 @@ export function PostedPropertyPage(){
                 const temp2 = file.split("\/");
                 const last = temp2[temp2.length - 1];
                 // return `http://localhost:8082/filesUploaded/${last}`;
-                return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
+                return `https://realestate-fullstack-backend-app-1.onrender.com/filesUploaded/${last}`;
             });
             return {
                 ...record,
@@ -61,7 +61,7 @@ export function PostedPropertyPage(){
 
     async function removeProperty(propId){
         // const res = await axios.delete(`http://localhost:8082/deletePropertyByPropertyID?propId=${propId}`,{
-            const res = await axios.delete(`https://realestate-fullstack-backend-app.onrender.com/deletePropertyByPropertyID?propId=${propId}`,{
+            const res = await axios.delete(`https://realestate-fullstack-backend-app-1.onrender.com/deletePropertyByPropertyID?propId=${propId}`,{
             headers : {
                 "authorization": token,
             }
@@ -72,7 +72,7 @@ export function PostedPropertyPage(){
 
     async function soldOrNot(soldOrNot,propId){
         // const res = await axios.put("http://localhost:8082/updateSold",
-        const res = await axios.put("https://realestate-fullstack-backend-app.onrender.com/updateSold",
+        const res = await axios.put("https://realestate-fullstack-backend-app-1.onrender.com/updateSold",
             {
                 sold : soldOrNot,
                 _id : propId
@@ -103,7 +103,7 @@ export function PostedPropertyPage(){
         const decodedToken = jwtDecode(token);
         const id = decodedToken.user;
         // const res = await axios.post(`http://localhost:8082/fetchRequests?propId=${propId}`,null,
-        const res = await axios.post(`https://realestate-fullstack-backend-app.onrender.com/fetchRequests?propId=${propId}`,null,
+        const res = await axios.post(`https://realestate-fullstack-backend-app-1.onrender.com/fetchRequests?propId=${propId}`,null,
             {
                 headers : {
                     "authorization": token,
@@ -136,7 +136,7 @@ export function PostedPropertyPage(){
         try{
             const propid = e.target.property_id.value;
             // const res = await axios.put(`http://localhost:8082/editPropertyDetails?propId=${propid}`,{
-                const res = await axios.put(`https://realestate-fullstack-backend-app.onrender.com/editPropertyDetails?propId=${propid}`,{
+                const res = await axios.put(`https://realestate-fullstack-backend-app-1.onrender.com/editPropertyDetails?propId=${propid}`,{
                 'property_type' : e.target.property_type.value,
                 'transaction_type' : e.target.transaction_type.value,
                 'property_name' : e.target.property_name.value,

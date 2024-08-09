@@ -4,6 +4,7 @@ import insta from "../Assets/Icons/insta.svg"
 import twitter from "../Assets/Icons/twitter.svg"
 import fb from "../Assets/Icons/fb.svg"
 import { NavLink } from "react-router-dom"
+import Chatbot from "./Chatbot"
 
 export function Footer(){
     return(
@@ -32,6 +33,7 @@ export function Footer(){
             <div id="copyright-footer">
                 <p>©2024 xyz India Pvt. Ltd</p>
             </div>
+            {/* <Chatbot/> */}
         </div>
     )
 }

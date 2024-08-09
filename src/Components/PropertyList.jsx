@@ -7,6 +7,7 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setProperty } from "../slices/propertySlice";
+import img3 from "../Assets/Images/img4.jpg"
 
 export function PropertyList() {
     const dispatch = useDispatch();
@@ -17,14 +18,14 @@ export function PropertyList() {
     }, [pageNo]);
 
     async function getAllPosts() {
-        const data = await axios.get(`https://realestate-fullstack-backend-app.onrender.com/getAllProperties?pageNo=${pageNo}`);
+        const data = await axios.get(`https://realestate-fullstack-backend-app-1.onrender.com/getAllProperties?pageNo=${pageNo}`);
 
         if(data.data.total_records >= 3){
             const processedRecords = data.data.records.map(record => {
                 const fixedFiles = record.files.map(file => {
                     const temp2 = file.split("/");
                     const last = temp2[temp2.length - 1];
-                    return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
+                    return `https://realestate-fullstack-backend-app-1.onrender.com/filesUploaded/${last}`;
                 });
                 return {
                     ...record,
@@ -67,7 +68,8 @@ export function PropertyList() {
                             <NavLink to={`/PropertyDetails/${item._id}`} id="prop-list-link" key={id}>
                                 <div id="property-card">
                                     <div id="image-cont">
-                                        <img src={item.files[0]} id="property-img" alt="image" />
+                                        {/* <img src={item.files[0]} id="property-img" alt="image" /> */}
+                                        <img src={img3} id="property-img" alt="image" />
                                     </div>
                                     <div id="detail-cont">
                                         <h2>{item.property_name}</h2>
