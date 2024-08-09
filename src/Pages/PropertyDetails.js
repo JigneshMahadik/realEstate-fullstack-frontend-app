@@ -88,8 +88,8 @@ export function PropertyDetails(){
             {
                 propertyDetails ?(
                     <div class="property-container">
-                        {/* <img src={propertyImage} /> */}
-                        <img src={img3} />
+                        <img src={propertyImage} />
+                        {/* <img src={img3} /> */}
                         <div id="details-title-cont">
                             <h1 id="prop-det-title">{ propertyDetails.property_name}</h1>
                             {
