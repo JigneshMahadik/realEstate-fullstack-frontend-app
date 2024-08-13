@@ -56,7 +56,7 @@ export function PostProperty() {
             //     furnishing = "null"
             // }
             const otherDetails = document.getElementById("otherDetails").value;
-            console.log("val is",document.getElementById("images").files[0]);
+            // console.log("val is",document.getElementById("images").files[0]);
 
             // if(propType)
 
