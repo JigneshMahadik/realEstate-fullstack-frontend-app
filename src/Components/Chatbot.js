@@ -15,7 +15,7 @@ const Chatbot = () => {
   const sendMessage = async () => {
     try {
       setMessages([...messages, { user: true, text: input }, { user: false, text: "Typing..." }]);
-      const response = await axios.post('http://localhost:8082/chat', { message: input });
+      const response = await axios.post('https://realestate-fullstack-backend-app-1.onrender.com/chat', { message: input });
       const botMessage = response.data.replace(/\n/g, '<br>');
       setMessages([...messages, { user: true, text: input }, { user: false, text: botMessage }]);
       setInput('');
