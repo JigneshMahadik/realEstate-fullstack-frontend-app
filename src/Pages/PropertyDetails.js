@@ -26,9 +26,9 @@ export function PropertyDetails(){
         // "C:\Geekster_Assignment\NodeJS\MCT_(15-6-24)\backend\filesUploaded\img4.jpg"
         // console.log("jack",response);
         const imgPath =  response.data.records.files;
-        console.log("total images are :", imgPath[0]);
+        // console.log("total images are :", imgPath[0]);
 
-        console.log("path is", imgPath);
+        // console.log("path is", imgPath);
         // const temp2 = imgPath.split("\\");
         // const last = temp2[temp2.length-1];
         // const newURL = `http://localhost:8082/filesUploaded/${last}`
@@ -45,17 +45,18 @@ export function PropertyDetails(){
 
         setPropertyDetails(response.data.records);
     }
-    console.log("detail",propertyDetails);
+    // console.log("detail",propertyDetails);
 
     async function sendMessage(propId){
         const token = sessionStorage.getItem('token'); // or wherever you store your token
         const decodedToken = jwtDecode(token);
         const id = decodedToken.user;
-        // const res = await axios.post(`http://localhost:8082/addRequests?propId=${propId}`,
+        const email = decodedToken.email;
+        const msg = document.getElementById("msg").value;
         const res = await axios.post(`https://realestate-fullstack-backend-app-1.onrender.com/addRequests?propId=${propId}`,
             {
                 userId : id,
-                message : document.getElementById("msg").value
+                message : msg
             },
             {
                 headers : {
@@ -64,8 +65,24 @@ export function PropertyDetails(){
             }
         );
         if(res.status == 200){
+            sendEmail(propId,email,token,msg);
             toast.success("Request has been sent to owner");
         }
+    }
+
+    async function sendEmail(propId,email,token,msg){
+        const response = await axios.post("https://realestate-fullstack-backend-app-1.onrender.com/sendMail",
+            {
+                emailId : email,
+                propertyId : propId,
+                messages : msg
+            },
+            {
+                headers : {
+                    "authorization": token,
+                }
+            }
+        );
     }
 
     return(
