@@ -79,7 +79,7 @@ export function PostProperty() {
 
             try{
                 // const res = await axios.post("http://localhost:8082/postProperty",formData, {
-                    const res = await axios.post("https://realestate-fullstack-backend-app-1.onrender.com/postProperty",formData, {
+                    const res = await axios.post("https://dwellio.up.railway.app/postProperty",formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                         "authorization": token,
