@@ -18,14 +18,14 @@ export function PropertyList() {
     }, [pageNo]);
 
     async function getAllPosts() {
-        const data = await axios.get(`dwellio.up.railway.app/getAllProperties?pageNo=${pageNo}`);
+        const data = await axios.get(`https://dwellio.up.railway.app/getAllProperties?pageNo=${pageNo}`);
 
         if(data.data.total_records >= 3){
             const processedRecords = data.data.records.map(record => {
                 const fixedFiles = record.files.map(file => {
                     const temp2 = file.split("/");
                     const last = temp2[temp2.length - 1];
-                    return `dwellio.up.railway.app/filesUploaded/${last}`;
+                    return `https://dwellio.up.railway.app/filesUploaded/${last}`;
                 });
                 return {
                     ...record,
