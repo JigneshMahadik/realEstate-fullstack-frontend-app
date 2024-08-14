@@ -1,5 +1,5 @@
 import "../CSS/PostProperty.css"
-import uploadImg from "../Assets/Images/img3.jpg"
+// import uploadImg from "../Assets/Images/img3.jpg"
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
