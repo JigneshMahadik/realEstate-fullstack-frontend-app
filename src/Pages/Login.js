@@ -12,7 +12,7 @@ export function Login(){
 
         try{
             // const res = await axios.post("http://localhost:8082/Login",
-            const res = await axios.post("https://realestate-fullstack-backend-app-1.onrender.com/Login",
+            const res = await axios.post("dwellio.up.railway.app/Login",
             {
                 email : emailId,
                 password : password

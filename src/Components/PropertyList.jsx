@@ -18,14 +18,14 @@ export function PropertyList() {
     }, [pageNo]);
 
     async function getAllPosts() {
-        const data = await axios.get(`https://realestate-fullstack-backend-app-1.onrender.com/getAllProperties?pageNo=${pageNo}`);
+        const data = await axios.get(`dwellio.up.railway.app/getAllProperties?pageNo=${pageNo}`);
 
         if(data.data.total_records >= 3){
             const processedRecords = data.data.records.map(record => {
                 const fixedFiles = record.files.map(file => {
                     const temp2 = file.split("/");
                     const last = temp2[temp2.length - 1];
-                    return `https://realestate-fullstack-backend-app-1.onrender.com/filesUploaded/${last}`;
+                    return `dwellio.up.railway.app/filesUploaded/${last}`;
                 });
                 return {
                     ...record,
