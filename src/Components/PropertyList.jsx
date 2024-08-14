@@ -25,6 +25,7 @@ export function PropertyList() {
                 const fixedFiles = record.files.map(file => {
                     const temp2 = file.split("/");
                     const last = temp2[temp2.length - 1];
+                    console.log("image is :",last);
                     return `https://dwellio.up.railway.app/filesUploaded/${last}`;
                 });
                 return {
@@ -68,6 +69,7 @@ export function PropertyList() {
                             <NavLink to={`/PropertyDetails/${item._id}`} id="prop-list-link" key={id}>
                                 <div id="property-card">
                                     <div id="image-cont">
+                                    {console.log("map valu is :",item.files[0])}
                                         <img src={item.files[0]} id="property-img" alt="image" />
                                         {/* <img src={img3} id="property-img" alt="image" /> */}
                                     </div>
