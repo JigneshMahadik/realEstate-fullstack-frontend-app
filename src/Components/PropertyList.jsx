@@ -18,15 +18,14 @@ export function PropertyList() {
     }, [pageNo]);
 
     async function getAllPosts() {
-        const data = await axios.get(`https://dwellio.up.railway.app/getAllProperties?pageNo=${pageNo}`);
+        const data = await axios.get(`https://realestate-fullstack-backend-app-1.onrender.com/getAllProperties?pageNo=${pageNo}`);
 
         if(data.data.total_records >= 3){
             const processedRecords = data.data.records.map(record => {
                 const fixedFiles = record.files.map(file => {
                     const temp2 = file.split("/");
                     const last = temp2[temp2.length - 1];
-                    console.log("image is :",last);
-                    return `https://dwellio.up.railway.app/filesUploaded/${last}`;
+                    return `https://realestate-fullstack-backend-app-1.onrender.com/filesUploaded/${last}`;
                 });
                 return {
                     ...record,
@@ -69,7 +68,6 @@ export function PropertyList() {
                             <NavLink to={`/PropertyDetails/${item._id}`} id="prop-list-link" key={id}>
                                 <div id="property-card">
                                     <div id="image-cont">
-                                    {console.log("map valu is :",item.files[0])}
                                         <img src={item.files[0]} id="property-img" alt="image" />
                                         {/* <img src={img3} id="property-img" alt="image" /> */}
                                     </div>
