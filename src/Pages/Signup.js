@@ -15,7 +15,7 @@ export function Signup(){
         
         try {
             // await axios.post("http://localhost:8082/Signup",{
-                await axios.post("https://realestate-fullstack-backend-app-1.onrender.com/Signup",{
+                await axios.post("https://realestate-fullstack-backend-app.onrender.com/Signup",{
                 first_name : Fname,
                 last_name : Lname,
                 email : Email,

@@ -16,7 +16,7 @@ export function Search() {
         }
 
         try{
-            const data = await axios.post("https://realestate-fullstack-backend-app-1.onrender.com/searchKeyword", {
+            const data = await axios.post("https://realestate-fullstack-backend-app.onrender.com/searchKeyword", {
                 keyword: keywords,
                 transactionType: type
             });
@@ -25,7 +25,7 @@ export function Search() {
                 const fixedFiles = record.files.map(file => {
                     const temp2 = file.split("/");
                     const last = temp2[temp2.length - 1];
-                    return `https://realestate-fullstack-backend-app-1.onrender.com/filesUploaded/${last}`;
+                    return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
                 });
                 return {
                     ...record,

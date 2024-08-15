@@ -25,7 +25,7 @@ export function RequestedPropertyPage(){
             const decodedToken = jwtDecode(token);
             const id = decodedToken.user;
             // const res = await axios.post(`http://localhost:8082/getRequestedProperties?userid=${id}`,null,
-            const res = await axios.post(`https://realestate-fullstack-backend-app-1.onrender.com/getRequestedProperties?userid=${id}`,null,
+            const res = await axios.post(`https://realestate-fullstack-backend-app.onrender.com/getRequestedProperties?userid=${id}`,null,
                 {
                     headers : {
                         "authorization": token,
@@ -46,7 +46,7 @@ export function RequestedPropertyPage(){
             const decodedToken = jwtDecode(token);
             const userid = decodedToken.user;
             // const res = await axios.delete(`http://localhost:8082/deleteProperty?propId=${propid}&userId=${userid}`,
-            const res = await axios.delete(`https://realestate-fullstack-backend-app-1.onrender.com/deleteProperty?propId=${propid}&userId=${userid}`,
+            const res = await axios.delete(`https://realestate-fullstack-backend-app.onrender.com/deleteProperty?propId=${propid}&userId=${userid}`,
                 {
                     headers : {
                         "authorization": token,
@@ -79,7 +79,7 @@ export function RequestedPropertyPage(){
                                     <div id="req-prop-image-box">
                                     {
                                         item.files && item.files.length > 0 ? (
-                                            <img src={`https://realestate-fullstack-backend-app-1.onrender.com${formatImageUrl(item.files[0])}`} alt="Property image" />
+                                            <img src={`https://realestate-fullstack-backend-app.onrender.com${formatImageUrl(item.files[0])}`} alt="Property image" />
                                         ):(
                                             <img src={img1} alt="Property image" /> // Provide a default image
                                         )

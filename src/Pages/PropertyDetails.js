@@ -22,7 +22,7 @@ export function PropertyDetails(){
 
     async function getPropertyById(id){
         // const response = await axios.post(`http://localhost:8082/getPropertyById?propId=${id}`);
-        const response = await axios.post(`https://realestate-fullstack-backend-app-1.onrender.com/getPropertyById?propId=${id}`);
+        const response = await axios.post(`https://realestate-fullstack-backend-app.onrender.com/getPropertyById?propId=${id}`);
         // "C:\Geekster_Assignment\NodeJS\MCT_(15-6-24)\backend\filesUploaded\img4.jpg"
         // console.log("jack",response);
         const imgPath =  response.data.records.files;
@@ -39,7 +39,7 @@ export function PropertyDetails(){
             const last = temp2[temp2.length-1];
             // console.log("last",`http://localhost:8082/filesUploaded/${last}`);
             // setPropertyImage(`http://localhost:8082/filesUploaded/${last}`);
-            setPropertyImage(`https://realestate-fullstack-backend-app-1.onrender.com/filesUploaded/${last}`);
+            setPropertyImage(`https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`);
             // return;
         // });
 
@@ -53,7 +53,7 @@ export function PropertyDetails(){
         const id = decodedToken.user;
         const email = decodedToken.email;
         const msg = document.getElementById("msg").value;
-        const res = await axios.post(`https://realestate-fullstack-backend-app-1.onrender.com/addRequests?propId=${propId}`,
+        const res = await axios.post(`https://realestate-fullstack-backend-app.onrender.com/addRequests?propId=${propId}`,
             {
                 userId : id,
                 message : msg
@@ -71,7 +71,7 @@ export function PropertyDetails(){
     }
 
     async function sendEmail(propId,email,token,msg){
-        const response = await axios.post("https://realestate-fullstack-backend-app-1.onrender.com/sendMail",
+        const response = await axios.post("https://realestate-fullstack-backend-app.onrender.com/sendMail",
             {
                 emailId : email,
                 propertyId : propId,
