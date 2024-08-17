@@ -56,6 +56,7 @@ export function PostProperty() {
             //     furnishing = "null"
             // }
             const otherDetails = document.getElementById("otherDetails").value;
+            const picsUrl = document.getElementById("images").value;
             // console.log("val is",document.getElementById("images").files[0]);
 
             // if(propType)
@@ -72,17 +73,20 @@ export function PostProperty() {
             formData.append('furnishing', furnishing)
             formData.append('other_details', otherDetails)
             formData.append('area', area);
+            formData.append('files', picsUrl);
 
-            files.forEach((file) => {
-                formData.append('files', file);
-            });
-
+            // files.forEach((file) => {
+            //     formData.append('files', file);
+            // });
+            // for (let [key, value] of formData.entries()) {
+            //     console.log(`${key}: ${value instanceof File ? value.name : value}`);
+            // }
             try{
                 // const res = await axios.post("http://localhost:8082/postProperty",formData, {
                     const res = await axios.post("https://realestate-fullstack-backend-app.onrender.com/postProperty",formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
-                        "Authorization": token,
+                        "authorization": token,
                     }
                 });
                 // console.log(res);
@@ -188,7 +192,7 @@ export function PostProperty() {
                     <label>
                         <h3>Upload Images:</h3>
                         {/* <input type="file" name="images" multiple onChange={(e)=> setFiles(e.target.files) }/> */}
-                        <input type="file" name="images" multiple onChange={ handleFileChange }/>
+                        <input type="file" name="images" id="images" onChange={ handleFileChange }/>
                     </label>
                     <div id="uploaded-images">
                         {
