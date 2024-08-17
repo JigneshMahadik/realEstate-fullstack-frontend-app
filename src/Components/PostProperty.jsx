@@ -82,7 +82,7 @@ export function PostProperty() {
                     const res = await axios.post("https://realestate-fullstack-backend-app.onrender.com/postProperty",formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
-                        "Authorization": `Bearer ${token}`,
+                        "Authorization": token,
                     }
                 });
                 // console.log(res);
