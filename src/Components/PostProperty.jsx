@@ -192,7 +192,7 @@ export function PostProperty() {
                     <label>
                         <h3>Upload Images:</h3>
                         {/* <input type="file" name="images" multiple onChange={(e)=> setFiles(e.target.files) }/> */}
-                        <input type="file" name="images" id="images" onChange={ handleFileChange }/>
+                        <input type="file" name="images" id="images" multiple onChange={ handleFileChange }/>
                     </label>
                     <div id="uploaded-images">
                         {
