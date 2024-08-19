@@ -20,7 +20,7 @@ export function PropertyList() {
     async function getAllPosts() {
         const data = await axios.get(`https://realestate-fullstack-backend-app.onrender.com/getAllProperties?pageNo=${pageNo}`);
 
-        if(data.data.total_records >= 3){
+        // if(data.data.total_records >= 3){
             const processedRecords = data.data.records.map(record => {
                 const fixedFiles = record.files.map(file => file);
                 return {
@@ -30,7 +30,7 @@ export function PropertyList() {
             });
     
             dispatch(setProperty(processedRecords));
-        }
+        // }
     }
     const storedData = useSelector((state) => state.property.properties);
 
