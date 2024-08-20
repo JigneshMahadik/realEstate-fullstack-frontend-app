@@ -23,29 +23,15 @@ export function PropertyDetails(){
     async function getPropertyById(id){
         // const response = await axios.post(`http://localhost:8082/getPropertyById?propId=${id}`);
         const response = await axios.post(`https://realestate-fullstack-backend-app.onrender.com/getPropertyById?propId=${id}`);
-        // "C:\Geekster_Assignment\NodeJS\MCT_(15-6-24)\backend\filesUploaded\img4.jpg"
-        // console.log("jack",response);
         const imgPath =  response.data.records.files;
         // console.log("total images are :", imgPath[0]);
-
-        // console.log("path is", imgPath);
-        // const temp2 = imgPath.split("\\");
+        // const temp2 = imgPath[0].split("\/");
         // const last = temp2[temp2.length-1];
-        // const newURL = `http://localhost:8082/filesUploaded/${last}`
-        // console.log("new url: ", newUR);
+        // setPropertyImage(`https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`);
+        setPropertyImage(imgPath[0]);
         
-        // const data = imgPath.map(file => {
-            const temp2 = imgPath[0].split("\/");
-            const last = temp2[temp2.length-1];
-            // console.log("last",`http://localhost:8082/filesUploaded/${last}`);
-            // setPropertyImage(`http://localhost:8082/filesUploaded/${last}`);
-            setPropertyImage(`https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`);
-            // return;
-        // });
-
         setPropertyDetails(response.data.records);
     }
-    // console.log("detail",propertyDetails);
 
     async function sendMessage(propId){
         const token = sessionStorage.getItem('token'); // or wherever you store your token
