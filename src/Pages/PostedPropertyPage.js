@@ -1,8 +1,5 @@
 import { Navbar } from "../Components/Navbar";
 import "../CSS/PostedPropertyPage.css"
-import img1 from "../Assets/Images/img5.jpeg"
-import img2 from "../Assets/Images/img3.jpg"
-import img3 from "../Assets/Images/img4.jpg"
 import location from "../Assets/Icons/location.png"
 import { Footer } from "../Components/Footer";
 import { useEffect, useState } from "react";
@@ -43,12 +40,7 @@ export function PostedPropertyPage(){
         // console.log("jack",last);
 
         const processedRecords = res.data.records.map(record => {
-            const fixedFiles = record.files.map(file => {
-                const temp2 = file.split("\/");
-                const last = temp2[temp2.length - 1];
-                // return `http://localhost:8082/filesUploaded/${last}`;
-                return `https://realestate-fullstack-backend-app.onrender.com/filesUploaded/${last}`;
-            });
+            const fixedFiles = record.files.map(file => file);
             return {
                 ...record,
                 fixedFiles

@@ -1,7 +1,5 @@
 import { Navbar } from "../Components/Navbar";
 import img1 from "../Assets/Images/img5.jpeg"
-import img2 from "../Assets/Images/img3.jpg"
-import img3 from "../Assets/Images/img4.jpg"
 import location from "../Assets/Icons/location.png"
 import "../CSS/RequestedPropertyPage.css"
 import { Footer } from "../Components/Footer";
@@ -62,9 +60,9 @@ export function RequestedPropertyPage(){
     }
 
     // Formate the image URL .
-    function formatImageUrl(url) {
-        return url.replace('/opt/render/project/src', '');
-    }
+    // function formatImageUrl(url) {
+    //     return url.replace('/opt/render/project/src', '');
+    // }
 
     return(
         <div>
@@ -79,7 +77,8 @@ export function RequestedPropertyPage(){
                                     <div id="req-prop-image-box">
                                     {
                                         item.files && item.files.length > 0 ? (
-                                            <img src={`https://realestate-fullstack-backend-app.onrender.com${formatImageUrl(item.files[0])}`} alt="Property image" />
+                                            // <img src={`https://realestate-fullstack-backend-app.onrender.com${formatImageUrl(item.files[0])}`} alt="Property image" />
+                                            <img src={item.files[0]} alt="Property image" />
                                         ):(
                                             <img src={img1} alt="Property image" /> // Provide a default image
                                         )
