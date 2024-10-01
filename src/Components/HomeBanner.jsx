@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import BannerImg from "../Assets/Images/HomeBanner.jpeg"
 import "../CSS/HomeBanner.css"
 
 export function HomeBanner(){
+
+    useEffect(()=>{
+        alert("Due to Global Server Down-Time property data may gets delay to load, please wait few seconds !");
+    },[]);
     return(
         <div>
             <div className="banner">
