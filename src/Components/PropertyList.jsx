@@ -18,7 +18,7 @@ export function PropertyList() {
     }, [pageNo]);
 
     async function getAllPosts() {
-        const data = await axios.get(`realestate-fullstack-backend-app-production.up.railway.app/getAllProperties?pageNo=${pageNo}`);
+        const data = await axios.get(`https://realestate-fullstack-backend-app.onrender.com/getAllProperties?pageNo=${pageNo}`);
 
         // if(data.data.total_records >= 3){
             const processedRecords = data.data.records.map(record => {

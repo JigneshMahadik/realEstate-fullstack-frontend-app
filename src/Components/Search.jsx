@@ -16,7 +16,7 @@ export function Search() {
         }
 
         try{
-            const data = await axios.post("realestate-fullstack-backend-app-production.up.railway.app/searchKeyword", {
+            const data = await axios.post("https://realestate-fullstack-backend-app.onrender.com/searchKeyword", {
                 keyword: keywords,
                 transactionType: type
             });
